@@ -119,10 +119,70 @@ nav {
   width: auto;
 }
 
-.coming-soon {
-  margin-top: 10px;
-  color: var(--gray);
-  font-size: 0.9rem;
+/* Download Buttons Group */
+.download-buttons-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.download-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.google-play-btn {
+  background: var(--white);
+  color: var(--dark-blue);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.google-play-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.app-store-btn {
+  background: var(--white);
+  color: var(--dark-blue);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.app-store-btn:hover:not(.coming-soon) {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.app-store-btn.coming-soon {
+  opacity: 0.9;
+  cursor: not-allowed;
+}
+
+.soon-badge {
+  background: var(--dark-blue);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--white);
 }
 
 .hero-image {
@@ -135,7 +195,6 @@ nav {
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
 }
-
 /* Features Section */
 .features {
   padding: 80px 20px;
